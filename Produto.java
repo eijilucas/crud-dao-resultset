@@ -9,10 +9,12 @@ package persistencia_comDAO;
  * @author lucas
  */
 public class Produto {
+    //Define os atributos id, descricao, preco
     protected int id;
     protected String descricao;
     protected double preco;
 
+    //Métodos de acesso get and set
     public int getId() {
         return id;
     }
