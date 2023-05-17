@@ -66,14 +66,14 @@ public class ProdutoDAO {
         PreparedStatement command = con.prepareStatement("select * from produtos");
         ResultSet rs = command.executeQuery();
         
-        List<Produto> lprod = new ArrayList<Produto>(); //Cria o objeto lprod
+        List<Produto> lprod = new ArrayList(); //Cria o objeto lprod
         
         if (rs.next()) {        //Verificador de dados e looping
             Produto p = new Produto();
             p.setId(rs.getInt("id"));
             p.setDescricao(rs.getString("descricao"));
             p.setPreco(rs.getDouble("preco"));
-            lprod = (List<Produto>) p;
+            lprod.add(prod);
         }
         return lprod;
     }
